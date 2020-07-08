@@ -1,7 +1,7 @@
 <?php include_once("./inc/head.php"); ?>
 <?php include_once("./inc/header.php"); ?>
 
-<main class="my-5 py5">
+<div class="my-5 py5">
     <section class="mt-5 formulario-contato-secao">
         <div class="formulario-contato text-center">
             <h3>ENTRAR COM EMAIL E SENHA</h3>
@@ -12,6 +12,6 @@
             </form>
         </div>
     </section>
-</main>
+</div>
 
 <?php include_once("./inc/footer.php"); ?>
