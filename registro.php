@@ -1,7 +1,7 @@
 <?php require_once("./inc/head.php"); ?>
 <?php require_once("./inc/header.php"); ?>
 
-<main class="container mt-5">
+<div class="container mt-5">
 <span class="mt-5"><br/></span>
     <form>
         <div class="form-group">
@@ -32,6 +32,6 @@
         <button type="submit" class="btn btn-primary">Criar Usuario</button>
         <button type="reset" class="btn btn-secondary">Limpar</button>
     </form>
-</main>
+</div>
 
 <?php require_once("./inc/footer.php"); ?>

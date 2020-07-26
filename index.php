@@ -1,79 +1,52 @@
 <?php include_once("./inc/head.php"); ?>
 <?php include_once("./inc/header.php"); ?>
 
-<!-- Início do carousel-->
-<div id="carouselSite" class="carousel slide" data-ride="carousel">
-    <!-- data-interval="false"-->
-
-    <!--Abaixo são aquelas barrinhas que indicam qual imagem do carousel você está vendo -->
-    <ol class="carousel-indicators">
-        <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselSite" data-slide-to="1"></li>
-        <li data-target="#carouselSite" data-slide-to="2"></li>
-        <li data-target="#carouselSite" data-slide-to="3"></li>
-    </ol>
-
-    <div class="carousel-inner" width:100%; height: 500px !important;>
-
-        <div class="carousel-item active">
-            <img src="./assets/img/Banner-bike-2-2.jpg" class="img-fluid d-block">
-            <div class="carousel-caption">
-                <!--<h3>Bicileta Elétrica</h3>
-                    <p>Aqui tem um texto muito louco falando sobre nossos produtos eletricos</p>-->
+<div>
+    <div id="carouselSite" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselSite" data-slide-to="1"></li>
+            <li data-target="#carouselSite" data-slide-to="2"></li>
+            <li data-target="#carouselSite" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" width:100%; height: 500px !important;>
+            <div class="carousel-item active">
+                <img src="./assets/img/Banner-bike-2-2.jpg" class="img-fluid d-block">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="./assets/img/banner-patinete-1-2.jpg" class="img-fluid d-block">
-            <div class="carousel-caption">
-                <!--<h3>Patinete Elétrico</h3>
-                    <p>Aqui tem um texto muito louco falando sobre nossos produtos eletricos</p>-->
+            <div class="carousel-item">
+                <img src="./assets/img/banner-patinete-1-2.jpg" class="img-fluid d-block">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="./assets/img/banner-monociclo-1-2.jpg" class="img-fluid d-block">
-            <div class="carousel-caption">
-                <!--<h3>Monociclo Elétrico</h3>
-                    <p>Aqui tem um texto muito louco falando sobre nossos produtos eletricos</p>-->
+            <div class="carousel-item">
+                <img src="./assets/img/banner-monociclo-1-2.jpg" class="img-fluid d-block">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="./assets/img/banner-moto-2.jpg" class="img-fluid d-block">
-            <div class="carousel-caption">
-                <!--<h3>Moto Elétrica</h3>
-                    <p>Aqui tem um texto muito louco falando sobre nossos produtos eletricos</p>-->
+            <div class="carousel-item">
+                <img src="./assets/img/banner-moto-2.jpg" class="img-fluid d-block">
+                <div class="carousel-caption">
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <!-- Início dos controles de Próximo e Anterior do carousel-->
-    <!--<a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="sr-only">Anterior</span>
-        </a>-->
-    <!--<a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="sr-only">Próximo</span>
-        </a> -->
-    <!-- Fim dos controles do carousel-->
-
-</div>
-<!-- Fim do carousel-->
-
-<div class="row-futuro">
-    <div class="text-center mt-5">
-        <h1 class="display-3 fonte-slogam">O futuro é elétrico!</h1>
-        <p class="fonte-slogam">Veja abaixo nossos produtos e apaixone-se
-        </p>
+    <div class="row-futuro">
+        <div class="text-center mt-5">
+            <h1 class="display-3 fonte-slogam">O futuro é elétrico!</h1>
+            <p class="fonte-slogam">Veja abaixo nossos produtos e apaixone-se
+            </p>
+        </div>
     </div>
-</div>
 
-<main>
+
     <div>
-        <!-- inicio dos cards abaixo-->
         <div class="row w-75 mx-auto mt-5">
 
             <div class="col-sm">
@@ -82,7 +55,6 @@
                     <div class="card-body text-center">
                         <h4 class="card-tittle ">Bicicletas</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Conforto e performance para suas atividades</h6>
-                        <!--<p class="card-text">Aqui tem o primeiro card, yeah!</p>-->
                         <a class="btn btn-outline-primary" href="#" role="button">Ver modelos</a>
 
                     </div>
@@ -96,7 +68,6 @@
                     <div class="card-body text-center">
                         <h4 class="card-tittle">Patinetes</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Mobilidade e economia para qualquer hora</h6>
-                        <!--<p class="card-text">Aqui tem o primeiro card, yeah!</p>-->
                         <a class="btn btn-outline-primary" href="#" role="button">Ver modelos</a>
 
                     </div>
@@ -110,7 +81,6 @@
                     <div class="card-body text-center">
                         <h4 class="card-tittle">Monociclos</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Praticidade para o dia a dia</h6>
-                        <!--<p class="card-text">Aqui tem o primeiro card, yeah!</p>-->
                         <a class="btn btn-outline-primary" href="#" role="button">Ver modelos</a>
 
                     </div>
@@ -124,7 +94,6 @@
                     <div class="card-body text-center">
                         <h4 class="card-tittle">Motos</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Elegância e economia na sua rotina</h6>
-                        <!--<p class="card-text">Aqui tem o primeiro card, yeah!</p>-->
                         <a class="btn btn-outline-primary" href="#" role="button">Ver modelos</a>
 
                     </div>
@@ -133,7 +102,7 @@
             </div>
 
 
-        </div> <!-- fim dos cards-->
+        </div>
     </div>
 
     <article class="fonte-site">
@@ -168,7 +137,7 @@
             <img src="./assets/img/view-fale-conosco-2.jpg" alt="Imagem 02">
         </div>
     </article>
-</main>
+</div>
 
 
 

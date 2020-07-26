@@ -1,6 +1,9 @@
 <?php include_once("./inc/head.php"); ?>
 <?php include_once("./inc/header.php"); ?>
+
+
 <span class="mt-5"><br /><br /><br /><br /></span>
+
 <main class="container-fluid">
     <div class="row d-flex justify-content-between">
         <div class="col-lg-6 mb-3">
