@@ -17,21 +17,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/bicicletas', function () {
-    return view('bicicletas');
-});
+Route::get('/bicicletas', 'ProductsController@listarBicicletas')->name('bicicletas');
 
-Route::get('/motos', function () {
-    return view('motos');
-});
+Route::get('/patinetes', 'ProductsController@listarPatinetes')->name('patinetes');
 
-Route::get('/monociclos', function () {
-    return view('monociclos');
-});
+Route::get('/monociclos', 'ProductsController@listarMonociclos')->name('monociclos');
 
-Route::get('/patinetes', function () {
-    return view('patinetes');
-});
+Route::get('/motos', 'ProductsController@listarMotos')->name('motos');
 
 Route::get('/detalhes', function () {
     return view('detalhes');
@@ -58,9 +50,13 @@ Route::get('/politicas', function () {
     return view('politicas');
 });
 
-Route::get('/registro', function () {
+Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho');
+
+Route::delete('/carrinho/remove{id}', 'CarrinhoController@delete');
+
+/*Route::get('/auth/registro', function () {
     return view('registro');
-});
+});*/
 
 Route::get('/termos', function () {
     return view('termos');

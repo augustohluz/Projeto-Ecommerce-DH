@@ -66,11 +66,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
                         </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="/login" data-toggle="modal" data-target="#modalLogin"><i class="fas fa-user"></i></i></a>
+                        </li>-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin"><i class="fas fa-user"></i></i></a>
+                            <a class="nav-link" href="/login"><i class="fas fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></i></a>
+                            <a class="nav-link" href="/carrinho"><i class="fas fa-shopping-cart"></i></i></a>
                         </li>
                     </ul>
                     
@@ -83,7 +86,7 @@
 
         </header>
 
-        <main class="py-4">
+        <main class="py-4 mt-5"> <!-- quando eu logar é aqui é para essa página que serei direcionado-->
             @yield('content')
         </main>
 
@@ -119,7 +122,7 @@
                             <button type="submit" class="btn btn-primary">Login</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
                         </form>
-                        <small class="d-block w-100 text-muted">Ainda não possui uma conta? <a href="registro" class="text-info">Crie agora!</a>.</small>
+                        <small class="d-block w-100 text-muted">Ainda não possui uma conta? <a href="/register" class="text-info">Crie agora!</a>.</small>
                     </div>
                 </div>
             </div>
