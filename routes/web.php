@@ -17,17 +17,25 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/bicicletas', 'ProductsController@listarBicicletas')->name('bicicletas');
+Route::get('/bicicletas', 'NavegacaoController@listarBicicletas')->name('bicicletas');
 
-Route::get('/patinetes', 'ProductsController@listarPatinetes')->name('patinetes');
+Route::get('/detalhes/{produto}', 'NavegacaoController@listarDetalhe');
 
-Route::get('/monociclos', 'ProductsController@listarMonociclos')->name('monociclos');
 
-Route::get('/motos', 'ProductsController@listarMotos')->name('motos');
 
-Route::get('/detalhes', function () {
-    return view('detalhes');
-});
+
+
+Route::get('/patinetes', 'NavegacaoController@listarPatinetes')->name('patinetes');
+
+Route::get('/monociclos', 'NavegacaoController@listarMonociclos')->name('monociclos');
+
+Route::get('/motos', 'NavegacaoController@listarMotos')->name('motos');
+
+
+
+
+
+
 
 Route::get('/contato', function () {
     return view('contato');
