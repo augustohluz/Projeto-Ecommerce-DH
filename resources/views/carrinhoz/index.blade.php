@@ -3,18 +3,8 @@
 @section('content')
 
 <div class="lista-produtos text-center">
-    
-    @if(!empty(Request::get('success')))
-    <section class="row">
-        <div class="col-12">
-            <div class="message alert alert-success text-center">
-                Registro excluído com sucesso
-            </div>
-        </div>
-    </section>
-    @endif
 
-    <h3>Carrinho</h3>
+    <h2>Meu Carrinho</h2><br>
 
     <table class="table table-hover display-flex">
         <thead class="thead-light">
@@ -43,13 +33,15 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Deseja excluir o cartão ? {{ $carrinhoTeste->nome }} ?</h5>
+                                    <h5 class="modal-title"><b>Deseja mesmo remover o item {{ $carrinhoTeste->nome }} de seu carrinho?</b></h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Cartão: {{ $carrinhoTeste->nome }}</p>
+                                    <p>Nome: {{ $carrinhoTeste->nome }}</p>
+                                    <p>Modelo: {{ $carrinhoTeste->modelo }}</p>
+                                    <p>Preço: {{ $carrinhoTeste->preco }}</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

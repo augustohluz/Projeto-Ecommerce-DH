@@ -10,53 +10,62 @@
         <thead class="thead-light">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">TIPO</th>
+                <th scope="col">NOME</th>
                 <th scope="col">MODELO</th>
-                <th scope="col">COR</th>
+                <th scope="col">VELOCIDADE</th>
                 <th scope="col">PREÇO</th>
-                <th scope="col">QUANTIDADE</th>
-                <th scope="col">VELOCIDADE MÁXIMA</th>
-                <th scope="col">POTENCIA DO MOTOR</th>
-                <th scope="col">AUTONOMIA</th>
-                <th scope="col">TEMPO DE CARREGAMENTO</th>
-                <th scope="col">STATUS</th>
-                <th scope="col">EDITAR</th>
-                <th scope="col">EXCLUIR</th>
+                <th scope="col">CATEGORIA</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
+            @foreach ($produtos as $listaProdutos)
             <tr>
-                <th scope="row">1</th>
-                <td>Bicicleta</td>
-                <td>Trek</td>
-                <td>Preto</td>
-                <td>5500</td>
-                <td>7</td>
-                <td>60 Km/h</td>
-                <td>350 Wh</td>
-                <td>60 km</td>
-                <td>6h até a carga máxima</td>
-                <td>Disponível</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="far fa-trash-alt"></i></td>
-            </tr>
+                <td>{{ $listaProdutos->id }}</td>
+                <td>{{ $listaProdutos->nome }}</td>
+                <td>{{ $listaProdutos->modelo }}</td>
+                <td>{{ $listaProdutos->velocidade }}</td>
+                <td>{{ $listaProdutos->preco }}</td>
+                <td>{{ $listaProdutos->categoria }}</td>
+                <td>
+                    <a href="/produtos/update/{{$listaProdutos->id}}">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" data-toggle="modal" data-target="#modal{{ $listaProdutos->id }}">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                    <div class="modal fade" id="modal{{ $listaProdutos->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"><b>Você realmente deseja excluir o produto {{ $listaProdutos->nome }} ?</b></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><b> Detalhes do produto:</b></p>
+                                    <p><b>Produto:</b> {{ $listaProdutos->nome }}</p>
+                                    <p><b>Produto:</b> {{ $listaProdutos->modelo }}</p>
+                                    <p><b>Produto:</b> {{ $listaProdutos->categoria }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="/produtos/remove {{ $listaProdutos->id }}" method="POST">
+                                        @csrf
+                                        {{ method_field('DELETE') }}
+                                        <button id="delete-contact" type="submit" class="btn btn-danger">Excluir</a></button>
+                                    </form>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
             <tr>
-                <th scope="row">2</th>
-                <td>Patinete</td>
-                <td>Xiaomi</td>
-                <td>Vermelho</td>
-                <td>4900</td>
-                <td>15</td>
-                <td>35 Km/h</td>
-                <td>250 Wh</td>
-                <td>40 km</td>
-                <td>4h até a carga máxima</td>
-                <td>Disponível</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="far fa-trash-alt"></i></td>
-            </tr>
-
-            </tr>
+                @endforeach
         </tbody>
     </table>
 </div>

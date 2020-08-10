@@ -18,29 +18,19 @@ Route::get('/', function () {
 });
 
 Route::get('/bicicletas', 'NavegacaoController@listarBicicletas')->name('bicicletas');
-
+Route::get('/patinetes', 'NavegacaoController@listarPatinetes')->name('patinetes');
+Route::get('/monociclos', 'NavegacaoController@listarMonociclos')->name('monociclos');
+Route::get('/motos', 'NavegacaoController@listarMotos')->name('motos');
 Route::get('/detalhes/{produto}', 'NavegacaoController@listarDetalhe');
 
 
-
-
-
-Route::get('/patinetes', 'NavegacaoController@listarPatinetes')->name('patinetes');
-
-Route::get('/monociclos', 'NavegacaoController@listarMonociclos')->name('monociclos');
-
-Route::get('/motos', 'NavegacaoController@listarMotos')->name('motos');
-
-
-
-
-
+Route::get('/detalhesCarrinho/{produto}', 'NavegacaoController@adicionarCarrinho');
+Route::post('/carrinho/add','NavegacaoController@testeAddCarrinho');
 
 
 Route::get('/contato', function () {
     return view('contato');
 });
-
 
 Route::get('/login', function () {
     return view('login');
@@ -58,13 +48,20 @@ Route::get('/politicas', function () {
     return view('politicas');
 });
 
-Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho');
+Route::get('/administracao', function () {
+    return view('administracao');
+});
 
+/*CARRINHO*/
+Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho');
 Route::delete('/carrinho/remove{id}', 'CarrinhoController@delete');
 
-/*Route::get('/auth/registro', function () {
-    return view('registro');
-});*/
+/*PRODUTO*/
+Route::get('/produtos', 'ProductsController@index')->name('produtos');
+Route::delete('/produtos/remove{id}', 'ProductsController@delete');
+
+Route::get('/produtos/update/{id}', 'ProductsController@edit');
+Route::put('/produtos/update/{id}', 'ProductsController@update');
 
 Route::get('/termos', function () {
     return view('termos');

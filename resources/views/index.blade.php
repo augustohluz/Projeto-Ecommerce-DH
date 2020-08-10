@@ -52,9 +52,8 @@
                 <div class="card mx-auto">
                     <img class="card-img-top" src="{{ asset("img/card-bicicleta-2.jpg") }}">
                     <div class="card-body text-center">
-                        <h4 class="card-tittle ">Bicicletas</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Conforto e performance para suas atividades</h6>
-                        <a class="btn btn-outline-primary" href="bicicletas" role="button">Ver modelos</a>
+                        <h2 class="card-tittle ">Bicicletas</h2>
+                        <a class="btn btn-outline-secondary" href="bicicletas" role="button">Ver modelos</a>
 
                     </div>
                 </div>
@@ -65,9 +64,8 @@
                 <div class="card mx-auto">
                     <img class="card-img-top" src="{{ asset("img/card-patinete-2.jpg") }}">
                     <div class="card-body text-center">
-                        <h4 class="card-tittle">Patinetes</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Mobilidade e economia para qualquer hora</h6>
-                        <a class="btn btn-outline-primary" href="patinetes" role="button">Ver modelos</a>
+                        <h2 class="card-tittle">Patinetes</h2>
+                        <a class="btn btn-outline-secondary" href="patinetes" role="button">Ver modelos</a>
 
                     </div>
                 </div>
@@ -78,9 +76,8 @@
                 <div class="card mx-auto">
                     <img class="card-img-top" src="{{ asset("img/card-monociclo-2.jpg") }}">
                     <div class="card-body text-center">
-                        <h4 class="card-tittle">Monociclos</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Praticidade e estilo para o dia a dia</h6>
-                        <a class="btn btn-outline-primary" href="monociclos" role="button">Ver modelos</a>
+                        <h2 class="card-tittle">Monociclos</h2>
+                        <a class="btn btn-outline-secondary" href="monociclos" role="button">Ver modelos</a>
 
                     </div>
                 </div>
@@ -91,9 +88,8 @@
                 <div class="card mx-auto">
                     <img class="card-img-top" src="{{ asset("img/card-scooter-3.jpg") }}">
                     <div class="card-body text-center">
-                        <h4 class="card-tittle">Motos</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Elegância e economia na sua rotina</h6>
-                        <a class="btn btn-outline-primary" href="motos" role="button">Ver modelos</a>
+                        <h2 class="card-tittle">Motos</h2>
+                        <a class="btn btn-outline-secondary" href="motos" role="button">Ver modelos</a>
 
                     </div>
                 </div>

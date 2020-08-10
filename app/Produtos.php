@@ -21,4 +21,5 @@ class Produtos extends Model
         $this->attributes['nome'] = $value;
         $this->attributes['slug'] = Str::slug($value);
     }
+
 }

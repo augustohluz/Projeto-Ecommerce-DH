@@ -4,16 +4,15 @@
 @endsection
 @section('content')
 
-<span class="mt-5"><br /><br /><br /><br /></span>
-
+<span class="mt-1"><br /><br /><br /><br /></span>
+<div class="detalhes-produto">
 <div class="container-fluid">
     <div class="row d-flex justify-content-between">
         <div class="col-lg-6 mb-3">
             <div id="carouselDetalhes" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselDetalhes" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselDetalhes" data-slide-to="1"></li>
-                    <li data-target="#carouselDetalhes" data-slide-to="2"></li>
+                    
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -32,7 +31,7 @@
         </div>
 
         <div class="col-lg-6">
-            <h2>{{$produto->nome}}</h2>
+            <h1>{{$produto->nome}}</h1>
             <small>código</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dignissimos sint deserunt minus iure nobis fuga omnis, eligendi sed, ratione unde totam similique maiores porro vitae rerum iste minima eius.</p>
             <hr />
@@ -44,8 +43,12 @@
                     </div>
                 </div>
                 <hr />
-                <p id="precoPdt">R$ 5.554,99</p>
-                <button type="submit" class="btn btn-primary">Adicionar ao carrinho</button>
+                <h3 id="precoPdt">R$ {{$produto->preco}}</h3>
+                
+                
+                    <button href="/carrinho" class="btn btn-success">Adicionar ao carrinho</button>
+                
+                
             </form>
         </div>
 
@@ -63,15 +66,11 @@
             <tbody>
                 <tr>
                     <th scope="row">Modelo</th>
-                    <td>QWERTY XY</td>
+                    <td>{{$produto->modelo}}</td>
                 </tr>
                 <tr>
-                    <th scope="row">Velocidade máxima</th>
-                    <td>25 km/h</td>
-                </tr>
-                <tr>
-                    <th scope="row">Potência do motor</th>
-                    <td>280 Wh</td>
+                    <th scope="row">Velocidade</th>
+                    <td>{{$produto->velocidade}}</td>
                 </tr>
                 <tr>
                     <th scope="row">Autonomia</th>
@@ -85,5 +84,5 @@
         </table>
     </div>
 </div>
-
+</div>
 @endsection
