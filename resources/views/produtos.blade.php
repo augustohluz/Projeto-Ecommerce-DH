@@ -4,6 +4,19 @@
 
 <div class="lista-produtos text-center">
 
+    <div class="mb-4">
+        <a href="/produto/add">
+            <button class="btn btn-dark">Cadastrar novo produto</button>
+        </a>
+    </div>
+
+    <div class="mb-4">
+        <form class="form-inline" action="{{ url('/produtos/search') }}" method="GET">
+            <input class="form-control col-10" type="text" name="search" id="search" placeholder="O que você procura?">
+            <button class="btn btn-dark col-2" type="submit">Pesquisar</button>
+        </form>
+    </div>
+
     <h3>Produtos</h3>
 
     <table class="table table-hover display-flex">
@@ -64,8 +77,8 @@
                         </div>
                     </div>
                 </td>
-            <tr>
-                @endforeach
+            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

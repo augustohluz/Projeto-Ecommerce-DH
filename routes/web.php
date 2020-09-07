@@ -63,6 +63,11 @@ Route::delete('/produtos/remove{id}', 'ProductsController@delete');
 Route::get('/produtos/update/{id}', 'ProductsController@edit');
 Route::put('/produtos/update/{id}', 'ProductsController@update');
 
+Route::get('/produto/add', 'ProductsController@add');
+Route::post('/produto/add', 'ProductsController@create');
+
+Route::get('/produtos/search', 'ProductsController@search');
+
 Route::get('/termos', function () {
     return view('termos');
 });
