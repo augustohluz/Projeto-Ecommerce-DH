@@ -54,40 +54,41 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contato">Contato</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register">Registre-se</a>
+                        </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item">
+                        </li>-->
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/carrinho"><i class="fas fa-shopping-cart"></i></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="nav-link" href="/login"><i class="fas fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin"><i class="fas fa-user"></i></i></a>
+                            <a class="nav-link" href="administracao"><i class="fas fa-key"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></i></a>
-                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="/login" data-toggle="modal" data-target="#modalLogin"><i class="fas fa-user"></i></i></a>
+                        </li>-->
                     </ul>
-                    
-                    <form class="form-inline mb-0">
-                        <input class="form-control ml-2 bg-light" type="search" placeholder="Buscar...">
-                        <button class="btn btn-light ml-2" type="Submit">Ok</button>
-                    </form>
                 </div>
             </nav>
 
         </header>
 
-        <main class="py-4">
+        <main class="py-4 main-content">
             @yield('content')
         </main>
 
-        <footer class="footer mt-auto py-1 fixed-bottom">
+        <footer class="footer mt-auto py-1">
             <div class="container">
                 <h5 class="text-center mt-2">
                     <a  href="politicas">Política de privacidade</a> | <a href="termos">Termos e Condições</a> | <a href="#">Quem somos nós</a>
@@ -119,7 +120,7 @@
                             <button type="submit" class="btn btn-primary">Login</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
                         </form>
-                        <small class="d-block w-100 text-muted">Ainda não possui uma conta? <a href="registro" class="text-info">Crie agora!</a>.</small>
+                        <small class="d-block w-100 text-muted">Ainda não possui uma conta? <a href="/register" class="text-info">Crie agora!</a>.</small>
                     </div>
                 </div>
             </div>
