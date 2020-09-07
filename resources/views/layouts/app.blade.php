@@ -54,6 +54,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contato">Contato</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register">Registre-se</a>
+                        </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">

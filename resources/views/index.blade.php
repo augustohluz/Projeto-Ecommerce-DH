@@ -41,7 +41,7 @@
     <div class="row-futuro">
         <div class="text-center mt-5">
             <h1 class="display-3 fonte-slogam">O futuro é elétrico!</h1>
-            <p class="fonte-slogam">Veja abaixo nossos produtos e apaixone-se!</p>
+            <h3 class="fonte-slogam">Veja abaixo nossos produtos e apaixone-se!</h3>
         </div>
     </div>
 
