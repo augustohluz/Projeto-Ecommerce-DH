@@ -3,39 +3,43 @@
 @section('content')
 
 <div class="lista-produtos text-center">
-
-    <div class="mb-4">
+    
+    <div class="mb-4 text-left">
         <a href="/produto/add">
-            <button class="btn btn-dark">Cadastrar novo produto</button>
+            <button class="btn btn-secondary">Cadastrar novo produto</button>
         </a>
     </div>
 
     <div class="mb-4">
-        <form class="form-inline" action="{{ url('/produtos/search') }}" method="GET">
+        <form class="form-inline " action="{{ url('/produtos/search') }}" method="GET">
             <input class="form-control col-10" type="text" name="search" id="search" placeholder="O que você procura?">
-            <button class="btn btn-dark col-2" type="submit">Pesquisar</button>
+            <button class="btn btn-secondary col-2" type="submit">Pesquisar</button>
         </form>
     </div>
 
-    <h3>Produtos</h3>
+    
 
     <table class="table table-hover display-flex">
         <thead class="thead-light">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">NOME</th>
-                <th scope="col">MODELO</th>
-                <th scope="col">VELOCIDADE</th>
-                <th scope="col">PREÇO</th>
-                <th scope="col">CATEGORIA</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Imagem</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Velocidade</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Deletar</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($produtos as $listaProdutos)
             <tr>
                 <td>{{ $listaProdutos->id }}</td>
+                <td>
+                <img src="{{ asset('img/null.jpg') }}" alt="">
+                </td>
                 <td>{{ $listaProdutos->nome }}</td>
                 <td>{{ $listaProdutos->modelo }}</td>
                 <td>{{ $listaProdutos->velocidade }}</td>

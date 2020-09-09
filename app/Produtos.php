@@ -15,6 +15,7 @@ class Produtos extends Model
         'velocidade',
         'preco',
         'categoria'
+        
     ];
 
     public function setNomeAttribute($value){

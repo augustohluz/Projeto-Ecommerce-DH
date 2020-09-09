@@ -43,7 +43,7 @@
         </div>
 
         <div class="form-group">
-            <a class="btn btn-secondary" href="{{ URL::previous() }}" role="button">Voltar</a>
+            <a class="btn btn-secondary" href="/produtos" role="button">Voltar</a>
         </div>
 
 

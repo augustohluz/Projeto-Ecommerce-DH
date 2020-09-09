@@ -26,8 +26,26 @@ class ProductsController extends Controller
 
     public function create(Request $request)
     {
+        $image = $request->file('image');
+
+        if(empty($image)){
+            $pathRelative = null;
+        } else {
+            $image->storePublicly('uploads');
+
+            $absolutePath = public_path()."/storage/uploads";
+
+            $name = $image->getClientOriginalName();
+
+            $image->move($absolutePath, $name);
+
+            $pathRelative = "storage/uploads/$name";
+        }
+
+
         $produto = new Produtos;
 
+        /*$produto->image = $pathRelative;*/
         $produto->nome = $request->nome;
         $produto->modelo = $request->modelo;
         $produto->velocidade = $request->velocidade;
